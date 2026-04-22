@@ -7,23 +7,47 @@
         android:id="@+id/text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="孟浩怎么样？"
+        android:text="猜猜我是谁？"
         android:gravity="center"
         android:textSize="24sp"
         android:textColor="#00ff00"
         />
-    <Button
-        android:id="@+id/button"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="提交"
-        android:textAllCaps="false"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp">
+
+        <!-- 输入框：长横线 -->
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="12dp"
+            android:maxLines="2"
+            android:hint="input answer here" />
+
+        <!-- 按钮：小，在右边 -->
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/furry_mengfufu"
         />
-    <EditText
-        android:id="@+id/edit_text"
+    <ProgressBar
+        android:id="@+id/progress_bar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:hint="input answer here"
-        android:maxLines="2"
+        android:visibility="gone"
         />
 </LinearLayout>
